@@ -2,7 +2,8 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: quarkus-pipeline-test-ingress
-   annotations:
+  namespace: dafolo
+  annotations:
     kubernetes.io/ingress.class: "nginx"    
     cert-manager.io/issuer: "letsencrypt-staging"
 spec:
