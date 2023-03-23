@@ -5,14 +5,14 @@ metadata:
   namespace: dafolo
   annotations:
     kubernetes.io/ingress.class: "nginx"    
-    cert-manager.io/issuer: "letsencrypt-staging"
+    cert-manager.io/cluster-issuer: "letsencrypt-staging"
 spec:
   tls:
   - hosts:
     - digitor.com
     secretName: quickstart-example-tls
   rules:
-  - host: digitor.dk
+  - host: test.digitor.dk
     http:
       paths:
       - path: /
