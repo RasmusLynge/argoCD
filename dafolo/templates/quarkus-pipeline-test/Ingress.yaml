@@ -6,14 +6,13 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: "nginx"    
     cert-manager.io/cluster-issuer: "letsencrypt-staging"
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   tls:
   - hosts:
-    - test.digitor.com
+    - digitor.dk
     secretName: letsencrypt-staging-cluster
   rules:
-  - host: test.digitor.dk
+  - host: digitor.dk
     http:
       paths:
       - path: /
