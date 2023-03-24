@@ -10,7 +10,7 @@ metadata:
 spec:
   tls:
   - hosts:
-    - digitor.com
+    - test.digitor.com
     secretName: quickstart-example-tls
   rules:
   - host: test.digitor.dk
