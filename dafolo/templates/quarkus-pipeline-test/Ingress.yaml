@@ -10,7 +10,7 @@ spec:
   tls:
   - hosts:
     - digitor.dk
-    secretName: letsencrypt-staging-cluster
+    secretName: quickstart-example-tls
   rules:
   - host: digitor.dk
     http:
