@@ -10,7 +10,7 @@ spec:
   tls:
   - hosts:
     - test.digitor.dk
-    secretName: quickstart-example-tls
+    secretName: letsencrypt-staging-dafolo
   rules:
   - host: test.digitor.dk
     http:
