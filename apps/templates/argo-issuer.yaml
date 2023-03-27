@@ -2,7 +2,7 @@ apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
   name: letsencrypt-prod
-  namespace: argo
+  namespace: argocd
 spec:
   acme:
     # The ACME server URL
