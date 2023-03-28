@@ -32,7 +32,7 @@ spec:
       containers:
       - name: test-rasmus
         image: ghcr.io/dafolo-digital/test-rasmus:1.0.0
-        imagePullPolicy: Always
+#        imagePullPolicy: Always
         ports:
           - containerPort: 8080
             name: http
