@@ -5,20 +5,20 @@ metadata:
   namespace: dafolo
   annotations:
     kubernetes.io/ingress.class: "nginx"    
-    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    cert-manager.io/issuer: "letsencrypt-prod"
 spec:
   tls:
   - hosts:
     - test.digitor.dk
     secretName: quickstart-example-tls
   rules:
-  - host: test.digitor.dk
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: quarkus-pipeline-test
-            port:
-              number: 80
+    - host: test.digitor.dk
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: quarkus-pipeline-test
+              port:
+                number: 80
