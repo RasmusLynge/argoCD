@@ -15,13 +15,9 @@ spec:
     helm:
       parameters:
         - name: expose.tls.enabled
-          value: 'true'
+          value: 'false'
         - name: expose.type
-          value: ingress
-        - name: expose.tls.certSource
-          value: secret
-        - name: expose.tls.secret.secretName
-          value: 'quickstart-example-tls'
+          value: nodePort
         - name: externalURL
           value: 'consul.digitor.dk'
   sources: []
