@@ -7,7 +7,7 @@ spec:
   containers:
   - name: test
     image: ghcr.io/dafolo-digital/test-rasmus:1.0.0
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
   imagePullSecrets:
   - name: regcred
 
