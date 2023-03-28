@@ -30,12 +30,12 @@ spec:
                   fieldPath: metadata.namespace
           image: ghcr.io/dafolo-digital/test-rasmus:1.0.0
           imagePullPolicy: Always
-          name: argo-test
+          name: test-rasmus
           ports:
             - containerPort: 8080
               name: http
           imagePullSecrets:
-            - name: regcred
+          - name: regcred
 ---
 apiVersion: v1
 kind: Service
