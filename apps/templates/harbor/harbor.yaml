@@ -15,11 +15,15 @@ spec:
     helm:
       parameters:
         - name: expose.tls.enabled
-          value: 'false'
+          value: 'true'
         - name: expose.type
-          value: nodePort
+          value: ingress
+        - name: expose.tls.certSource
+          value: secret
+        - name: expose.tls.secret.secretName
+          value: 'quickstart-example-tls'
         - name: externalURL
-          value: 'http://127.0.0.1:30002'
+          value: 'consul.digitor.dk'
   sources: []
   project: default
   syncPolicy: null
