@@ -30,14 +30,13 @@ spec:
         app.kubernetes.io/name: test-rasmus
     spec:
       containers:
-        - image: ghcr.io/dafolo-digital/test-rasmus:1.0.0
-          imagePullPolicy: Always
-          name: test-rasmus
+        - name: test-rasmus
+          image: ghcr.io/dafolo-digital/test-rasmus:1.0.0
+          imagePullSecrets:
+            - name: regcred
           ports:
             - containerPort: 8080
               name: http
-          imagePullSecrets:
-            - name: regcred
 ---
 apiVersion: v1
 kind: Service
