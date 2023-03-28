@@ -2,19 +2,27 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: harbor
-  namespace: argocd
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
+    name: ''
     namespace: harbor
-    server: https://kubernetes.default.svc
-  project: default
+    server: 'https://kubernetes.default.svc'
   source:
-    path: harbor/
-    repoURL: https://github.com/RasmusLynge/argoCD.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+    path: ''
+    repoURL: 'https://helm.goharbor.io'
+    targetRevision: 1.11.0
+    chart: harbor
+    helm:
+      parameters:
+        - name: expose.tls.enabled
+          value: 'false'
+        - name: expose.type
+          value: nodePort
+        - name: externalURL
+          value: 'consul.digitor.dk'
+  sources: []
+  project: default
+  syncPolicy: null
+ #   automated:
+ #     prune: false
+ #     selfHeal: false
