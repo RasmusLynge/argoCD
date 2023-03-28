@@ -30,14 +30,14 @@ spec:
         app.kubernetes.io/name: test-rasmus
     spec:
       containers:
-        - imagePullSecrets:
-          - name: regcred
-            type: kubernetes.io/dockerconfigjson
-          name: test-rasmus
-          image: ghcr.io/dafolo-digital/test-rasmus:1.0.0
-          ports:
-            - containerPort: 8080
-              name: http
+      - name: test-rasmus
+        image: ghcr.io/dafolo-digital/test-rasmus:1.0.0
+        ports:
+          - containerPort: 8080
+            name: http
+      imagePullSecrets:
+        - name: regcred
+          type: kubernetes.io/dockerconfigjson
 ---
 apiVersion: v1
 kind: Service
