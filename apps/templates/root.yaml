@@ -13,7 +13,7 @@ spec:
     path: apps/
     repoURL: https://github.com/RasmusLynge/argoCD.git
     targetRevision: HEAD
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+  syncPolicy: null
+#    automated:
+#      prune: true
+#      selfHeal: true
