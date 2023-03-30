@@ -26,7 +26,6 @@ spec:
             name: http
       imagePullSecrets:
         - name: regcred
-          type: kubernetes.io/dockerconfigjson
 ---
 apiVersion: v1
 kind: Service
