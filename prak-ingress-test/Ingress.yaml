@@ -15,14 +15,7 @@ spec:
     - host: prak.digitor.dk
       http:
         paths:
-        - path: /test1/
-          pathType: Prefix
-          backend:
-            service:
-              name: quarkus-pipeline-test
-              port:
-                number: 80
-        - path: /test2/
+        - path: /test1
           pathType: Prefix
           backend:
             service:
