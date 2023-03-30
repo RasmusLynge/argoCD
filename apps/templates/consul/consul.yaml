@@ -24,8 +24,8 @@ spec:
           value: 'true'
         - name: connectInject.enabled
           value: 'false'
-        - name: syncCatalog.enabled
-          value: 'true'
+#        - name: syncCatalog.enabled   <-- Hvad er det til? 
+#          value: 'true'
   project: default
   syncPolicy:
     automated:
