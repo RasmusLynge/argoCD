@@ -2,24 +2,24 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    app.quarkus.io/build-timestamp: 2023-03-30 - 11:45:42 +0000
+    app.quarkus.io/build-timestamp: 2023-03-30 - 12:59:18 +0000
   labels:
-    app.kubernetes.io/name: core-message-entry
     app.kubernetes.io/version: 1.0.0
+    app.kubernetes.io/name: core-message-entry
   name: core-message-entry
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: core-message-entry
       app.kubernetes.io/version: 1.0.0
+      app.kubernetes.io/name: core-message-entry
   template:
     metadata:
       annotations:
-        app.quarkus.io/build-timestamp: 2023-03-30 - 11:45:42 +0000
+        app.quarkus.io/build-timestamp: 2023-03-30 - 12:59:18 +0000
       labels:
-        app.kubernetes.io/name: core-message-entry
         app.kubernetes.io/version: 1.0.0
+        app.kubernetes.io/name: core-message-entry
     spec:
       containers:
       - env:
@@ -41,7 +41,7 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    app.quarkus.io/build-timestamp: 2023-03-30 - 11:45:42 +0000
+    app.quarkus.io/build-timestamp: 2023-03-30 - 12:59:18 +0000
   labels:
     app.kubernetes.io/name: core-message-entry
     app.kubernetes.io/version: 1.0.0
@@ -56,24 +56,3 @@ spec:
     app.kubernetes.io/name: core-message-entry
     app.kubernetes.io/version: 1.0.0
   type: ClusterIP
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  annotations:
-    app.quarkus.io/build-timestamp: 2023-03-30 - 11:45:42 +0000
-  labels:
-    app.kubernetes.io/name: core-message-entry
-    app.kubernetes.io/version: 1.0.0
-  name: core-message-entry
-spec:
-  rules:
-  - http:
-      paths:
-      - backend:
-          service:
-            name: core-message-entry
-            port:
-              name: http
-        path: /
-        pathType: Prefix
