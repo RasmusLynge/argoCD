@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    app.quarkus.io/build-timestamp: 2023-03-30 - 20:57:53 +0000
+    app.quarkus.io/build-timestamp: 2023-03-30 - 21:04:45 +0000
   labels:
     app.kubernetes.io/name: sagdokindeks-message-sender
     app.kubernetes.io/version: 1.0.0
@@ -21,24 +21,24 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    app.quarkus.io/build-timestamp: 2023-03-30 - 20:57:53 +0000
+    app.quarkus.io/build-timestamp: 2023-03-30 - 21:04:45 +0000
   labels:
-    app.kubernetes.io/name: sagdokindeks-message-sender
     app.kubernetes.io/version: 1.0.0
+    app.kubernetes.io/name: sagdokindeks-message-sender
   name: sagdokindeks-message-sender
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: sagdokindeks-message-sender
       app.kubernetes.io/version: 1.0.0
+      app.kubernetes.io/name: sagdokindeks-message-sender
   template:
     metadata:
       annotations:
-        app.quarkus.io/build-timestamp: 2023-03-30 - 20:57:53 +0000
+        app.quarkus.io/build-timestamp: 2023-03-30 - 21:04:45 +0000
       labels:
-        app.kubernetes.io/name: sagdokindeks-message-sender
         app.kubernetes.io/version: 1.0.0
+        app.kubernetes.io/name: sagdokindeks-message-sender
     spec:
       containers:
       - env:
