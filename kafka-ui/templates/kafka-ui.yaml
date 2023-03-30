@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kafka-ui
+spec:
+  destination:
+    name: ''
+    namespace: kafka-ui
+    server: ''
+  source:
+    path: ''
+    repoURL: 'https://provectus.github.io/kafka-ui'
+    targetRevision: 0.6.1
+    chart: kafka-ui
+  sources: []
+  project: ''
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true

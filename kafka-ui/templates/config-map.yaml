@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kafka-ui-existing-configmap-as-a-configfile
+data:
+  config.yml: |-
+    kafka:
+      clusters:
+        - name: yaml
+          bootstrapServers: 16.203.227.72:9092
+    auth:
+      type: disabled
+    management:
+      health:
+        ldap:
+          enabled: false
