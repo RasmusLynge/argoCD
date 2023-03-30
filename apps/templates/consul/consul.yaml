@@ -14,7 +14,9 @@ spec:
     chart: consul
     helm:
       parameters:
-        - name: syncCatalog.enabled
+        - name: global.tls.enabled
+          value: 'true'
+        - name: global.acls.manageSystemACLs
           value: 'true'
         - name: server.enabled
           value: 'true'
@@ -22,9 +24,8 @@ spec:
           value: 'true'
         - name: connectInject.enabled
           value: 'false'
-        - name: ui.enabled
+        - name: syncCatalog.enabled
           value: 'true'
-  sources: []
   project: default
   syncPolicy:
     automated:
