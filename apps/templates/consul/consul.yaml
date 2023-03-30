@@ -14,8 +14,8 @@ spec:
     chart: consul
     helm:
       parameters:
-        - name: global.tls.enabled
-          value: 'true'
+#        - name: global.tls.enabled
+#          value: 'true'
         - name: global.acls.manageSystemACLs
           value: 'true'
         - name: server.enabled
