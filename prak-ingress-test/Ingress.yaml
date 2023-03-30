@@ -15,7 +15,7 @@ spec:
     - host: prak.digitor.dk
       http:
         paths:
-        - path: /test1
+        - path: /
           pathType: Prefix
           backend:
             service:
