@@ -27,7 +27,7 @@ metadata:
     app.kubernetes.io/version: 1.0.2
   name: sagdokindeks-api-producer
 spec:
-  replicas: 1
+  replicas: 10
   selector:
     matchLabels:
       app.kubernetes.io/name: sagdokindeks-api-producer
